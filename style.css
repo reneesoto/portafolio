@@ -94,7 +94,7 @@ body {
 /* Home-top */
 .home-top {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr) 80px 1fr;
   padding-left: 50px;
   padding-top: 60px;
 }
@@ -121,6 +121,7 @@ details > summary::-webkit-details-marker {
 .proyectos {
   border: 2px solid black;
   padding: 20px;
+  grid-column: 4 / 5;
 }
 .proyectos p {
   font-size: 16px;
