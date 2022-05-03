@@ -59,10 +59,11 @@ picture {
 /* Variables */
 :root {
   /* 1. Colores */
-  --black: #000000;
-  --white: #ffffff;
+  --black: #ffffff;
+  --white: #000000;
   /* 2. Tipografía */
   --font-sans: 'Inter var', sans-serif;
+  /*'Inter var'*/
   --font-size-1: 1rem;
   --font-size-2: 1.1rem;
   --font-size-3: 1.25rem;
@@ -80,6 +81,35 @@ picture {
 /* Base */
 body {
   font-family: var(--font-sans);
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 500;
 }
+
+/* Home-top */
+.home-top {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding-left: 50px;
+  padding-top: 60px;
+}
+
+.home-top .logo h1 {
+font-size: 20px;
+font-weight: 400;
+}
+
+/* Hide arrow */
+details>summary {
+  list-style: none;
+  font-weight: 400;
+}
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+/* details summary{
+  opacity: .5;
+} */
+
