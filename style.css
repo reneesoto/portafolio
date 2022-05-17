@@ -1,12 +1,16 @@
 /* Imports - Tipografía */
 @import url("https://rsms.me/inter/inter.css");
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
 html {
   font-family: "Inter", sans-serif;
+  font-family: 'Ibarra Real Nova', serif;
 }
 
 @supports (font-variation-settings: normal) {
   html {
     font-family: "Inter var", sans-serif;
+    font-family: 'Ibarra Real Nova', serif;
   }
 }
 
@@ -49,7 +53,18 @@ picture {
   display: block;
 }
 
+.serif{
+font-family: var(--font-serif);
+font-size: 20px;
+}
+.sans{
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 400;
+}
+
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -67,6 +82,7 @@ picture {
   --white: #000000;
   /* 2. Tipografía */
   --font-sans: "Inter var", sans-serif;
+  --font-serif: 'Ibarra Real Nova', serif;
   /*'Inter var'*/
   --font-size-1: 1rem;
   --font-size-2: 1.1rem;
@@ -84,48 +100,52 @@ picture {
 
 /* Base */
 body {
-  font-family: var(--font-sans);
   background-color: var(--black);
   color: var(--white);
-  font-size: 20px;
-  font-weight: 500;
 }
 
 /* Home-top */
 .home-top {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 80px 1fr;
-  padding-left: 50px;
-  padding-top: 60px;
+  grid-template-columns: repeat(7, 1fr);
+  padding-left: 30px;
 }
 
 .home-top .logo h1 {
-  font-size: 20px;
-  font-weight: 400;
+  font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 /* Hide arrow */
-details > summary {
+details>summary {
   list-style: none;
-  font-weight: 400;
+  padding-top: 60px;
 }
-details > summary::-webkit-details-marker {
+
+details>summary::-webkit-details-marker {
   display: none;
 }
 
-/* details summary{
-  opacity: .5;
-} */
+nav{
+  grid-column: 2 / 4;
+}
 
 /* Proyectos */
 .proyectos {
-  border: 2px solid black;
-  padding: 20px;
-  grid-column: 4 / 5;
+  /* background-color: #000000;
+  color: #ffffff; */
+  padding: 40px;
+  padding-top: 90px;
+  height: 100vh;
+  grid-column: 5 / 8;
+
 }
+
 .proyectos p {
   font-size: 16px;
   padding-bottom: 20px;
+
 }
-.proyectos img {
-}
+
+.proyectos img {}
