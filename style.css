@@ -1,16 +1,16 @@
 /* Imports - Tipografía */
 @import url("https://rsms.me/inter/inter.css");
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 
 html {
   font-family: "Inter", sans-serif;
-  font-family: 'Ibarra Real Nova', serif;
+  font-family: "Ibarra Real Nova", serif;
 }
 
 @supports (font-variation-settings: normal) {
   html {
     font-family: "Inter var", sans-serif;
-    font-family: 'Ibarra Real Nova', serif;
+    font-family: "Ibarra Real Nova", serif;
   }
 }
 
@@ -35,7 +35,9 @@ picture {
 
 body {
   line-height: 1.5;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
+  /* overflow: hidden; */
 }
 
 ul {
@@ -47,9 +49,12 @@ li {
   list-style: none;
 }
 
-a{
+a {
   color: #000000;
-
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
 }
 
 img,
@@ -58,18 +63,17 @@ picture {
   display: block;
 }
 
-.serif{
-font-family: var(--font-serif);
-font-size: 20px;
+.serif {
+  font-family: var(--font-serif);
+  font-size: 20px;
 }
-.sans{
+.sans {
   font-family: var(--font-sans);
   font-size: 17px;
   font-weight: 400;
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -87,7 +91,7 @@ font-size: 20px;
   --white: #000000;
   /* 2. Tipografía */
   --font-sans: "Inter var", sans-serif;
-  --font-serif: 'Ibarra Real Nova', serif;
+  --font-serif: "Ibarra Real Nova", serif;
   /*'Inter var'*/
   --font-size-1: 1rem;
   --font-size-2: 1.1rem;
@@ -114,25 +118,43 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   padding-left: 30px;
+  height: 100vh;
 }
 
 .home-top .logo h1 {
   font-family: var(--font-serif);
-    font-size: 20px;
-    font-weight: 500;
+  font-size: 20px;
+  font-weight: 500;
+}
+.nav {
+  top: 0.1px;
+  position: sticky;
+}
+.logo {
+}
+.home-left {
+  position: relative;
+  height: 100vh;
 }
 
 /* Hide arrow */
-details>summary {
+details > summary {
   list-style: none;
   padding-top: 60px;
 }
 
-details>summary::-webkit-details-marker {
+details > summary::-webkit-details-marker {
   display: none;
 }
 
-nav{
+details .details-bottom {
+  position: absolute;
+  bottom: 10px;
+  width: 100px;
+  margin-top: auto;
+}
+
+nav {
   grid-column: 2 / 4;
 }
 
@@ -141,15 +163,18 @@ nav{
   background-color: #000000;
   color: #ffffff;
   /* padding-top: 90px; */
-  height: 100vh;
+  max-height: 100vh;
+  overflow-y: scroll;
+  height: 1000px;
   grid-column: 5 / 8;
-
 }
 
 .proyectos p {
   font-size: 16px;
   padding-bottom: 20px;
-
+}
+.proyectos li {
 }
 
-.proyectos img {}
+.proyectos img {
+}
