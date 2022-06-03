@@ -53,12 +53,17 @@ a {
   color: #000000;
   text-decoration: none;
 }
+
 a:hover {
-  color: blue;
+  color: rgb(145, 145, 145);
 }
 
 img,
 picture {
+  max-width: 100%;
+  display: block;
+}
+video {
   max-width: 100%;
   display: block;
 }
@@ -67,6 +72,7 @@ picture {
   font-family: var(--font-serif);
   font-size: 20px;
 }
+
 .sans {
   font-family: var(--font-sans);
   font-size: 17px;
@@ -74,6 +80,7 @@ picture {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -126,24 +133,26 @@ body {
   font-size: 20px;
   font-weight: 500;
 }
+
 .nav {
   top: 0.1px;
   position: sticky;
 }
-.logo {
-}
+
+.logo {}
+
 .home-left {
   position: relative;
   height: 100vh;
 }
 
 /* Hide arrow */
-details > summary {
+details>summary {
   list-style: none;
   padding-top: 60px;
 }
 
-details > summary::-webkit-details-marker {
+details>summary::-webkit-details-marker {
   display: none;
 }
 
@@ -152,6 +161,7 @@ details .details-bottom {
   bottom: 10px;
   width: 100px;
   margin-top: auto;
+  padding-bottom: 30px;
 }
 
 nav {
@@ -164,17 +174,38 @@ nav {
   color: #ffffff;
   /* padding-top: 90px; */
   max-height: 100vh;
+  padding-left: 0;
+  margin: 0;
   overflow-y: scroll;
   height: 1000px;
   grid-column: 5 / 8;
 }
-
+.proyectos-b{
+  color: #000000;
+  /* background-color: aqua; */
+  /* padding-top: 90px; */
+  max-height: 100vh;
+  padding-left: 0;
+  margin: 0;
+  overflow-y: scroll;
+  height: 1000px;
+  grid-column: 5 / 8;
+}
 .proyectos p {
   font-size: 16px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
+  font-family: var(--font-sans);
+ padding-right: 40px;
+ padding-left: 40px;
 }
-.proyectos li {
+.proyectos-b p {
+  font-size: 16px;
+  /* padding-bottom: 20px; */
+  font-family: var(--font-sans);
+  padding-right: 40px;
+  padding-left: 40px;
 }
-
-.proyectos img {
+.active {
+ color: rgb(2, 23, 53);
+ font-weight: bold;
 }
