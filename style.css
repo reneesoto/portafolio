@@ -208,3 +208,20 @@ nav {
 .active {
  font-weight: 520;
 }
+
+
+
+@media screen and (max-width: 600px) {
+.home-top{
+  display: block;
+  padding: 0;
+}
+.home-left{
+  height: 34vh;
+  padding: 20px;
+
+}
+.sans {
+  background-color: #ffffff;
+}
+}
